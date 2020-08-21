@@ -1,0 +1,75 @@
+.sidebar {
+  height: 100%;
+  flex: .35;
+  border-right: 1px solid lightgray;
+  display: flex;
+  flex-direction: column;
+
+  .sidebar__header {
+    padding: 10px;
+    max-height: 60px;
+    background-color: #EDEDED;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+    &__icons {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #919191;
+      margin-right: 10px;
+      width: 8vw;
+
+      & > button mat-icon {
+        margin-right: 5vw;
+        font-size: 24px;
+      }
+
+    }
+  }
+
+  &__search {
+    background-color: #F6F6F6;
+    border-bottom: 1px solid #ccc;
+    padding:10px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+
+    &__content {
+      width:fit-content;
+      position:relative;
+
+      &__icon {
+        position: absolute;
+        top:-5px;
+        left:0px;
+        color:#ccc;
+        font-size: 14px;
+      }
+
+      &__input {
+        border:1px solid lightgray;
+        width: 380px;
+        outline: none;
+        border-radius: 20px;
+        padding:8px 20px 8px 30px;
+
+        &::placeholder {
+          padding-left: 2.5rem;
+          font-size: small;
+        }
+
+      }
+    }
+
+
+  }
+
+  &__content {
+    overflow-y: scroll;
+    flex:1;
+  }
+}

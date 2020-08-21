@@ -1,0 +1,5 @@
+<section class="main-container">
+  <app-sidebar (seedValue)="seedData($event)"></app-sidebar>
+
+  <app-chat-area [randomSeed]="seedValue"></app-chat-area>
+</section>

@@ -1,0 +1,31 @@
+.sidebar-content{
+  display:flex;
+  align-items: center;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid lightgray;
+
+  &:hover {
+    background-color: lightgray;
+  }
+
+  &__room {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+
+    span {
+      font-size: small;
+    }
+
+    span.sidebar-content__room__name {
+      font-size: 1.18rem;
+      align-self: flex-start;
+    }
+
+    span.sidebar-content__room__last-msg {
+      align-self: flex-start;
+    }
+  }
+}

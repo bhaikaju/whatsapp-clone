@@ -1,0 +1,45 @@
+<section class="chat">
+  <div class="chat__header">
+    <img alt="avatar" mat-card-avatar
+         src="https://avatars.dicebear.com/api/human/abcd{{ randomSeed }}.svg">
+    <div class="chat__header__room-name">
+      <h4>{{ roomName || 'ROOM NAME' }}</h4>
+    </div>
+    <div class="chat__header__right">
+      <button mat-icon-button>
+        <mat-icon>search_outline</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon class="file">attach_file</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon>more_vert</mat-icon>
+      </button>
+    </div>
+  </div>
+
+  <div class="chat__body">
+    <router-outlet (activate)="chatData($event)"></router-outlet>
+  </div>
+
+  <div class="chat__footer">
+    <button mat-icon-button>
+      <mat-icon>mood</mat-icon>
+    </button>
+
+    <form #form="ngForm" (ngSubmit)="formSubmit(form)">
+      <input name="message"
+             ngModel
+             placeholder="Type a message"
+             type="text"
+             class="chat__footer__send-message"
+      >
+
+      <button type="submit" style="display: none;"></button>
+    </form>
+
+    <button mat-icon-button>
+      <mat-icon>mic</mat-icon>
+    </button>
+  </div>
+</section>
